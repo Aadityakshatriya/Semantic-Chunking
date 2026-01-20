@@ -1,5 +1,6 @@
 # --- Notebook "foundation" caps (avoid common dependency conflicts) ---
 numpy<2.1.0
+pandas==2.2.2
 protobuf<5.0.0
 huggingface-hub<1.0
 pillow<12.0
@@ -9,7 +10,10 @@ fsspec<=2025.3.0
 gradio
 
 # --- YouTube download ---
-yt-dlp
+yt-dlp==2025.12.8
+
+# --- Audio tooling used in notebook (note: you still need ffmpeg binary installed) ---
+ffmpeg-python==0.2.0
 
 # --- Transcription ---
 faster-whisper==1.2.1
@@ -18,10 +22,11 @@ soundfile
 # --- Embeddings ---
 sentence-transformers
 
-# --- VAD ---
+# --- VAD / Torch stack (matching notebook pins) ---
 torch==2.5.1
+torchvision==0.20.1
 torchaudio==2.5.1
 silero-vad==6.2.0
 
-# --- Optional: speaker diarization (only needed if you enable diarize=True + HF_TOKEN) ---
+# --- Optional: speaker diarization (not version-pinned in notebook) ---
 pyannote.audio
