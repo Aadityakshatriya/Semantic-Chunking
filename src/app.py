@@ -32,4 +32,8 @@ with gr.Blocks(title="YouTube Semantic Chunker") as demo:
     btn.click(run_pipeline, inputs=[url, diarize], outputs=[out])
 
 if __name__ == "__main__":
-    demo.queue().launch()
+    demo.queue().launch(
+        share=True,                 # <- this gives you a public gradio.live URL in Colab
+        server_name="0.0.0.0",      # <- good practice on hosted envs
+        server_port=7860,
+    )
