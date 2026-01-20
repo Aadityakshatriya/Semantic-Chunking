@@ -1,0 +1,27 @@
+# --- Notebook "foundation" caps (avoid common dependency conflicts) ---
+numpy<2.1.0
+protobuf<5.0.0
+huggingface-hub<1.0
+pillow<12.0
+fsspec<=2025.3.0
+
+# --- App/UI ---
+gradio
+
+# --- YouTube download ---
+yt-dlp
+
+# --- Transcription ---
+faster-whisper==1.2.1
+soundfile
+
+# --- Embeddings ---
+sentence-transformers
+
+# --- VAD ---
+torch==2.5.1
+torchaudio==2.5.1
+silero-vad==6.2.0
+
+# --- Optional: speaker diarization (only needed if you enable diarize=True + HF_TOKEN) ---
+pyannote.audio
